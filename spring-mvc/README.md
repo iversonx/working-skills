@@ -1,4 +1,4 @@
-# 带着问题学习SpringMVC
+# 带着问题阅读SpringMVC源码
 
 Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。Spring MVC是围绕`DispatcherServlet`设计的，核心组件有：`DispatcherServlet`,`HandlerAdapter`,`HandlerMethod`,`Controller`,`ModelAndView`,`ViewResolver`,`HandlerMapping`。
 
