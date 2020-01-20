@@ -31,5 +31,5 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。Spring M
 5. `DispatcherServlet`将view响应给客户端进行展示。
 
 以下内容是基于注解方式配置进行解答：
-- [问答-HandlerMapping](HandlerMapping.md)
-- [问答-HandlerAdapter](HandlerAdapter.md)
+- [问答-HandlerMapping](QA-HandlerMapping.md)
+- [问答-HandlerAdapter](QA-HandlerAdapter.md)
