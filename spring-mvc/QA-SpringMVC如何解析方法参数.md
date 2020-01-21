@@ -6,12 +6,12 @@
 
 ## 方法参数解析
 
-2.  首先从`HandlerMethod`中获取Handler方法参数数组，SpringMVC使用`MethodParameter`来存储方法参数信息，因此得到是`MethodParameter`类型的数组。
+1.  首先从`HandlerMethod`中获取Handler方法参数数组，SpringMVC使用`MethodParameter`来存储方法参数信息，因此得到是`MethodParameter`类型的数组。
     
-3.  如果Handler没有定义方法参数，则不进行参数解析，直接调用handler进行请求处理；
+2.  如果Handler没有定义方法参数，即方法参数数组的length为0，则不进行参数解析，直接调用handler进行请求处理；
     
-4.  如果定义了方法参数，则开始遍历数组，逐个进行参数解析。
+3.  如果定义了方法参数，则开始遍历数组，逐个进行参数解析。
     
-5.  在解析某个参数前，都会先获取合适方法参数解析器`HandlerMethodArgumentResolver`。如果没有找到合适解析器，将抛出`IllegalStateException`异常。
+4.  在解析某个参数前，都会先获取合适方法参数解析器`HandlerMethodArgumentResolver`。如果没有找到合适解析器，将抛出`IllegalStateException`异常。
 
 > HandlerMethodArgumentResolver拥有多种解析策略，例如RequestParamArgumentResolver用于对使用@RequestParam注解的参数或没有使用任何注解的参数进行解析
