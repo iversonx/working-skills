@@ -33,3 +33,4 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。Spring M
 以下内容是基于注解方式配置进行解答：
 - [问答-HandlerMapping](QA-HandlerMapping.md)
 - [问答-HandlerAdapter](QA-HandlerAdapter.md)
+- [问答-SpringMVC如何解析方法参数](QA-SpringMVC如何解析方法参数.md)
