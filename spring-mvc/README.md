@@ -18,19 +18,14 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。Spring M
 
 ## Spring MVC处理请求的流程
 
-![流程图](processing-request-flow.png)
+![流程图](processing-request-flow-2.png)
 
-1. `DispatcherServlet`接收到客户端请求后，首先根据uri到`HandlerMapping`中确定`Handler`；此时`DispatcherServlet`会得到`HandlerExecutionChain`实例；
+1. 客户端发起一个HTTP请求到服务器；
 
-2. 接着`DispatcherServlet`会根据`Handler`确定`HandlerAdapter`；
-
-3. `HandlerAdapter`解析方法参数并调用`Handler`，进行请求处理；根据`Handler`的返回内容得到`ModelAndView`；并将`ModelAndView`返回给`DispatcherServlet`；
-
-4. `DispatcherServlet`调用`ViewResolvers`对`ModelAndView`进行解析获得实际的`View`，接着对view进行渲染。最后返回view；
-
-5. `DispatcherServlet`将view响应给客户端进行展示。
+2. 
 
 以下内容是基于注解方式配置进行解答：
+
 - [问答-HandlerMapping](QA-HandlerMapping.md)
 - [问答-HandlerAdapter](QA-HandlerAdapter.md)
 - [问答-SpringMVC如何解析方法参数](QA-SpringMVC如何解析方法参数.md)
