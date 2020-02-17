@@ -1,4 +1,4 @@
-- [HandlerMapping之实现类](implements.md)：SimpleUrlHandlerMapping，BeanNameUrlHandlerMapping，RequestMappingHandlerMapping
+- [HandlerMapping之实现类](implements.md)
 
 - [HandlerMapping之设计模式](designPattern.md)
 
