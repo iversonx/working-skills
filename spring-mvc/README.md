@@ -30,7 +30,7 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。
 
 - [DispatcherServlet](DispatcherServlet.md)：处理HTTP请求的中央控制器，调用其他组件来处理请求
 
-- [HandlerMapping](HandlerMapping.md)：处理器映射器，将请求URL与Handler进行映射
+- [HandlerMapping](HandlerMapping/README.md)：处理器映射器，将请求URL与Handler进行映射
 
 - [HandlerMethod](HandlerMethod.md)：处理器方法，封装Handler的方法信息
 
@@ -45,11 +45,3 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。
 - [ModelAndView](ModelAndView.md)：包含响应数据和真实视图信息
 
 - [View](View.md)：真实视图
-
-## 问答
-
-以下内容是基于注解方式配置进行解答：
-
-- [问答-HandlerMapping](QA-HandlerMapping.md)
-- [问答-HandlerAdapter](QA-HandlerAdapter.md)
-- [问答-SpringMVC如何解析方法参数](QA-SpringMVC如何解析方法参数.md)
