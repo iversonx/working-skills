@@ -10,20 +10,24 @@ Spring MVC默认定义了3个`HandlerAdapter`类型的Bean。并在容器初始�
 
 - `SimpleControllerHandlerAdapter`：支持`Controller`类型的handler
 
-以`RequestMappingHandlerAdapter`为例，`RequestMappingHandlerAdapter`在初始化完成后，还会再次检查`argumentResolvers`,`returnValueHandlers`是否null；如果为null，则设置相应的默认值，以便`RequestMappingHandlerAdapter`可以进行参数解析和返回值处理。
+以`RequestMappingHandlerAdapter`为例，
 
-以上内容看阅读源码：
+首先会创建`RequestMappingHandlerAdapter`的实例，并设置属性。`RequestMappingHandlerAdapter`在初始化完成后，还会再次检查`argumentResolvers`,`returnValueHandlers`是否null；如果为null，则设置相应的默认值，以便`RequestMappingHandlerAdapter`可以进行参数解析和返回值处理。
 
-`WebMvcConfigurationSupport#requestMappingHandlerAdapter()`,
+以上内容看阅读源码
 
-`WebMvcConfigurationSupport#httpRequestHandlerAdapter()`,
+- `WebMvcConfigurationSupport#requestMappingHandlerAdapter()`,
 
-`WebMvcConfigurationSupport#simpleControllerHandlerAdapter()`,
+- `WebMvcConfigurationSupport#httpRequestHandlerAdapter()`,
 
-`RequestMappingHandlerAdapter`
+- `WebMvcConfigurationSupport#simpleControllerHandlerAdapter()`,
 
-## 问3：DispatcherServlet为什么不直接调用Handler，而是调用HandlerAdapter
+- `RequestMappingHandlerAdapter`
 
-`DispatcherServlet`接收请求时，会根据请求uri从`HandlerMapping`中获取`Handler`的执行链`HandlerExecutionChain`，`HandlerExecutionChain`中已经包含了`Handler`。此时已经可以获取具体`Handler`了。
+## 问2：为什么不直接使用Handler，而使用HandlerAdapter
 
-SpringMVC使用`HandlerAdapter`的目的为了让`DispatcherServlet`与`Handler`解耦，这样`DispatcherServlet`不需要知道`Handler`的具体类型，就可以完成请求；从而使用`Handler`可以很好的进行扩展。
+在SpingMVC中处理请求的handler被声明为Object类型，因此handler可以任何类型。
+
+`HandlerAdapter`的目的就是适配不同类型handler，每种类型handler都有一个与之对应的`HandlerAdapter`实现；这样`DispatcherServlet`无需包含任何特定的handler的代码，只需与`HandlerAdapter`接口进行交互，从而使`DispatcherServlet`可以无限扩展。
+
+

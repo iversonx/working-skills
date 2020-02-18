@@ -27,5 +27,3 @@
 - `AnnotationMethodHandlerAdapter`：已经被`@Deprecated`标记，被`RequestMappingHandlerAdapter`代替
 
 >  `AnnotationMethodHandlerAdapter`自3.2之后就被废弃了，所以不进行分析。
-
-
