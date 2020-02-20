@@ -28,20 +28,20 @@ Spring MVC是Spring基于MVC(model-view-controller)架构的web框架。
 
 ## 组件
 
-- [DispatcherServlet](DispatcherServlet.md)：处理HTTP请求的中央控制器，调用其他组件来处理请求
+- [DispatcherServlet](DispatcherServlet/README.md)：处理HTTP请求的中央控制器，调用其他组件来处理请求
 
 - [HandlerMapping](HandlerMapping/README.md)：处理器映射器，将请求URL与Handler进行映射
 
-- [HandlerMethod](HandlerMethod.md)：处理器方法，封装Handler的方法信息
+- [HandlerMethod](HandlerMethod/README.md)：处理器方法，封装Handler的方法信息
 
-- [HandlerAdapter](HandlerAdapter.md)：处理器适配器，调用具体的Handler来处理请求
+- [HandlerAdapter](HandlerAdapter/README.md)：处理器适配器，调用具体的Handler来处理请求
 
-- [HandlerMethodArgumentResolver](HandlerMethodArgumentResolver.md)：用于解析请求参数，然后传递给Handler方法
+- [HandlerMethodArgumentResolver](HandlerMethodArgumentResolver/README.md)：用于解析请求参数，然后传递给Handler方法
 
-- [HandlerMethodReturnValueHandler](HandlerMethodReturnValueHandler.md)：用于处理Handler方法的返回值
+- [HandlerMethodReturnValueHandler](HandlerMethodReturnValueHandler/README.md)：用于处理Handler方法的返回值
 
-- [ViewResolver](ViewResolver.md)：视图解析器，将基于字符串的逻辑视图名称解析真实的视图
+- [ViewResolver](ViewResolver/README.md)：视图解析器，将基于字符串的逻辑视图名称解析真实的视图
 
-- [ModelAndView](ModelAndView.md)：包含响应数据和真实视图信息
+- [ModelAndView](ModelAndView/README.md)：包含响应数据和真实视图信息
 
 - [View](View.md)：真实视图

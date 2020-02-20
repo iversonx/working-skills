@@ -23,5 +23,3 @@
 - `RequestHeaderMethodArgumentResolver`：解析使用`@RequestHeader`注解的方法参数(参数类型为Map除外)。
 
 - `RequestResponseBodyMethodProcessor`：通过使用`HttpMessageConverter`读写请求或响应的主体，解析以`@RequestBody`注解的方法参数，并处理以`@RequestBody`注释的方法返回值。
-
-
