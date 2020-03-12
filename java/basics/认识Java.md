@@ -28,7 +28,13 @@ Java将源代码编译成字节码文件，由JVM负责执行。字节码与不�
 
 JVM默认采用混合模式，它会先解释执行字节码，而后将其中反复执行的热点代码，以方法为单位进行即时编译。
 
-#### JDK与JRE
+#### 3. JDK与JRE
+
+##### JVM
+
+Java 虚拟机(Java Virtual Machine)是整个Java平台的基石，是Java技术用以实现硬件无关，操作系统无关的关键部分。JVM与Java语言没有必然联系，只与特定的class文件关联。
+
+Java虚拟机组成部分：类加载器子系统、运行时数据区、执行引擎以及垃圾回收系统。
 
 ##### JDK
 
@@ -39,7 +45,3 @@ Java开发工具包(Java Development Kit)，它提供编译，运行Java程序�
 Java运行运行时环境(Java Runtime Environment)，包括JVM，Java类库，java命令和其他一些基础构件。
 
 如果只是为了运行Java程序，可以只安装JRE；如果需要进行Java编程，就需要安装JDK。如果需要运行基于JSP的Web程序，也需要安装JDK，因为应用服务器会将JSP转为Java Servlet，并使用JDK来编译Servlet
-
-
-
-
