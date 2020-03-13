@@ -22,13 +22,11 @@ MyBatis是一个持久层框架，支持定制化SQL、存储过程以及高级�
 
 6. `StatementHandler`首先调用`ParameterHandler`进行组装参数；接着调用JDBC API；最后调用`ResultSetHandler`处理结果集；最后将执行结果返回。
 
-
-
 ## 组件
 
-- Configuration：存储所有的MyBatis配置
+- Configuration：Configuration存储MyBatis的所有配置信息。Configuration的属性对应所有MyBatis配置项
 
-- SqlSession：MyBatis主要接口。可以用于执行SQL，获取Mapper，管理事务。
+- SqlSession：MyBatis主要接口。可以用于执行SQL，获取Mapper，管理事务
 
 - MapperRegistry：用于管理Mapper接口对应代理对象MapperProxy。
 
@@ -36,10 +34,14 @@ MyBatis是一个持久层框架，支持定制化SQL、存储过程以及高级�
 
 - MapperMethod：存储Mapper接口的方法与sql的关联
 
-- Executor：
+- Executor：在调用JDBC之前，进行一些处理，例如缓存的设置和读取、是否采用批处理、Statement是否复用等。
 
-- StatementHandler
+- StatementHandler：封装JDBC操作
 
-- ParameterHandler
+- ParameterHandler：用于进行参数设置
 
-- ResultSetHandler
+- ResultSetHandler：用处理结果集
+
+
+
+
